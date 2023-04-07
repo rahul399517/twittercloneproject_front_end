@@ -1,0 +1,99 @@
+.profilepagepic {
+  width: 130px;
+  height: 130px;
+  border-radius: 80px;
+}
+.bio {
+  margin-top: -7px;
+}
+#follower {
+  border-right: 2px solid #c3c3c3;
+  padding-right: 40px;
+  margin-top: 40px;
+}
+#followerX {
+  padding-right: 40px;
+  margin-top: 40px;
+}
+#profilecontainer {
+  width: 70vw;
+  padding: 40px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.custom-btn-profile {
+  border: 2px solid #dee5e9;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px;
+}
+.custom-btn-upload {
+  border: 2px solid #dee5e9;
+  background-color: rgb(214, 48, 75);
+  color: white;
+  padding: 10px;
+}
+.custom-profile {
+  padding: 0.6rem;
+  border-radius: 4px;
+}
+#profilepost {
+  width: 15rem;
+  height: 20rem;
+  margin-left: 60px;
+  margin-right: 20px;
+}
+#profileimg {
+  width: 15rem;
+  height: 20rem;
+}
+.uploadbox {
+  height: 400px;
+  width: auto;
+  border-radius: 10px;
+  border: 2px dotted gray;
+}
+#imagepreview {
+  height: 400px;
+  width: 23rem;
+  border-radius: 10px;
+}
+.dropZoneContainer {
+  position: absolute;
+  top: 12vw;
+  left: 4vw;
+}
+.dropZoneOverlay,
+.FileUpload {
+  width: 283px;
+  height: 71px;
+}
+.dropZoneOverlay {
+  color: #7066fb;
+  position: absolute;
+  top: 0px;
+  text-align: center;
+}
+.FileUpload {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+}
+.colored-toast.swal2-icon-success {
+  background-color: #a5dc86 !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  #hideonmobile {
+    display: none;
+  }
+  #profilepost {
+    width: 350px;
+    height: auto;
+    margin-left: 0px;
+  }
+  #profileimg {
+    width: 350px;
+    height: auto;
+  }
+}

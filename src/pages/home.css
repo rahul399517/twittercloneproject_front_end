@@ -1,0 +1,27 @@
+#post {
+  padding: 0px 50px 0px 50px;
+}
+#sidemenu {
+  display: flex;
+}
+#containermain {
+  width: 100rem;
+}
+#navvertival {
+  width: 350px;
+  margin-top: 85px;
+}
+@media only screen and (max-width: 1000px) {
+  #hideinmobile {
+    display: none;
+  }
+  #post {
+    padding: 0px 0px 0px 0px;
+  }
+  #sidemenu {
+    display: none;
+  }
+  #containermain {
+    width: 100%;
+  }
+}

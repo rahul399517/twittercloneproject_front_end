@@ -1,0 +1,44 @@
+.custom-btn {
+  padding: 0.6rem;
+  border-radius: 4px;
+}
+.custom-btn-blue {
+  border: 1px solid #b3e0ff;
+  background-color: #b3e0ff;
+  color: white;
+}
+.custom-btn-white {
+  border: 1px solid #dee5e9;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px;
+}
+.socialDesktop {
+  display: block;
+}
+.socialMobile {
+  display: none;
+}
+#cardbox {
+  padding: 40px;
+}
+#loginformcard {
+  height: 400px;
+}
+#firelogo {
+  width: 100%;
+  height: 490px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 100%;
+  }
+  #hideinmobile {
+    display: none;
+  }
+  #firelogo {
+    width: 100%;
+    height: 290px;
+  }
+}

@@ -1,0 +1,33 @@
+#logo {
+  width: 50px;
+}
+.colored-toast.swal2-icon-success {
+  background-color: #a5dc86 !important;
+}
+.nav {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  border-radius: 20px;
+  z-index: 1;
+  position: fixed;
+  top: 7px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.73);
+  border-radius: 16px;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.73);
+  border-radius: 16px;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.navmain {
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+}
