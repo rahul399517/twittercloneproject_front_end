@@ -247,8 +247,8 @@ function SubscribedCard(props) {
               }}
               src={
                 props.tweetData.retweetFrom
-                  ? props.tweetData.retweetFrom.profileImg
-                  : props.tweetData.author.profileImg
+                  ? props.tweetData.retweetFrom?.profileImg
+                  : props.tweetData.author?.profileImg
               }
               alt="not avail"
             />
