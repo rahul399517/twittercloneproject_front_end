@@ -226,7 +226,7 @@ function SubscribedCard(props) {
               </div>
               <div className="col-10">
                 {" "}
-                Retweeted By {props.tweetData.author.fullName}
+                Retweeted By {props.tweetData.author?.fullName}
               </div>
             </div>
           </Card>
@@ -266,14 +266,14 @@ function SubscribedCard(props) {
               }}
             >
               {props.tweetData.retweetFrom
-                ? props.tweetData.retweetFrom.fullName
-                : props.tweetData.author.fullName}
+                ? props.tweetData.retweetFrom?.fullName
+                : props.tweetData.author?.fullName}
 
               <br></br>
 
               <p style={{ color: "#4169e1", fontSize: "small" }}>
                 <i className="fa-solid fa-location-dot"> </i>{" "}
-                {props.tweetData.location}
+                {props.tweetData?.location}
               </p>
             </p>
             <p
@@ -283,7 +283,7 @@ function SubscribedCard(props) {
                 fontWeight: "100",
               }}
             >
-              {props.tweetData.date}
+              {props.tweetData?.date}
             </p>
           </div>
         </div>
@@ -291,7 +291,7 @@ function SubscribedCard(props) {
         <Card.Img
           style={{ height: "400px", padding: "0px", marginTop: "-30px" }}
           variant="bottom"
-          src={props.tweetData.image}
+          src={props.tweetData?.image}
         />
         <div
           className="desc"
@@ -299,7 +299,7 @@ function SubscribedCard(props) {
           style={{ height: "95px", overflow: "hidden" }}
         >
           <Card.Text style={{ fontFamily: "georgia" }}>
-            {props.tweetData.description}
+            {props.tweetData?.description}
           </Card.Text>
         </div>
         <p
@@ -315,14 +315,14 @@ function SubscribedCard(props) {
               <div className="col-2">
                 <i
                   style={{ color: "red" }}
-                  onClick={() => Disliketweet(props.tweetData._id, "unlike")}
+                  onClick={() => Disliketweet(props.tweetData?._id, "unlike")}
                   className="fa-solid fa-heart"
                 ></i>
               </div>
             ) : (
               <div className="col-2">
                 <i
-                  onClick={() => liketweet(props.tweetData._id, "like")}
+                  onClick={() => liketweet(props.tweetData?._id, "like")}
                   style={{ color: "black" }}
                   className="fa-regular fa-heart"
                 ></i>
@@ -332,7 +332,7 @@ function SubscribedCard(props) {
             <div className="col-2">
               <i
                 onClick={() => {
-                  retweet(props.tweetData._id);
+                  retweet(props.tweetData?._id);
                 }}
                 style={{ color: "black" }}
                 className="fa-solid fa-retweet"
@@ -360,7 +360,7 @@ function SubscribedCard(props) {
               <p
                 style={{ float: "left", fontSize: "small", fontWeight: "700" }}
               >
-                {props.tweetData.likes.length} likes
+                {props.tweetData.likes?.length} likes
               </p>
             </div>
 
@@ -368,7 +368,7 @@ function SubscribedCard(props) {
               <p style={{}}>{props.tweetData.retweets?.length}</p>
             </div>
             <div className="col-2">
-              <p style={{}}>{props.tweetData.comments.length}</p>
+              <p style={{}}>{props.tweetData.comments?.length}</p>
             </div>
           </div>
           {/**comment box text area*/}
@@ -390,7 +390,7 @@ function SubscribedCard(props) {
                   <div className="col-2 ">
                     <button
                       onClick={() => {
-                        submitcomment(props.tweetData._id);
+                        submitcomment(props.tweetData?._id);
                         setAllComment(true);
                       }}
                       className="form-control btn btn-primary"
@@ -444,7 +444,7 @@ function SubscribedCard(props) {
         {/*all comment devision*/}
         {allcomment ? (
           <>
-            {props.tweetData.comments
+            {props.tweetData?.comments
               .map((comment) => {
                 return (
                   <div className="row" key={comment._id}>
@@ -459,7 +459,7 @@ function SubscribedCard(props) {
                                   height: "30px",
                                   borderRadius: "30px",
                                 }}
-                                src={comment.commentedBy.profileImg}
+                                src={comment.commentedBy?.profileImg}
                                 alt="img not avail"
                               />
                             </div>
@@ -471,7 +471,7 @@ function SubscribedCard(props) {
                                 fontSize: "small",
                               }}
                             >
-                              {comment.commentedBy.fullName}
+                              {comment.commentedBy?.fullName}
                             </div>
                             <div
                               className="col-7"
@@ -489,7 +489,7 @@ function SubscribedCard(props) {
                                 onClick={() => {
                                   handleDeleteComment(
                                     comment._id,
-                                    props.tweetData._id
+                                    props.tweetData?._id
                                   );
                                 }}
                               >
@@ -649,7 +649,7 @@ function SubscribedCard(props) {
                                                   height: "30px",
                                                   borderRadius: "30px",
                                                 }}
-                                                src={reply.replyBy.profileImg}
+                                                src={reply.replyBy?.profileImg}
                                                 alt="img not avail"
                                               />
                                             </div>
@@ -661,7 +661,7 @@ function SubscribedCard(props) {
                                                 fontSize: "small",
                                               }}
                                             >
-                                              {reply.replyBy.fullName}
+                                              {reply.replyBy?.fullName}
                                             </div>
                                             <div
                                               className="col-7"
@@ -758,8 +758,8 @@ function SubscribedCard(props) {
                 }}
                 src={
                   props.tweetData.retweetFrom
-                    ? props.tweetData.retweetFrom.profileImg
-                    : props.tweetData.author.profileImg
+                    ? props.tweetData.retweetFrom?.profileImg
+                    : props.tweetData.author?.profileImg
                 }
                 alt="not avail"
               />
@@ -778,12 +778,12 @@ function SubscribedCard(props) {
               >
                 &nbsp; &nbsp;
                 {props.tweetData.retweetFrom
-                  ? props.tweetData.retweetFrom.fullName
-                  : props.tweetData.author.fullName}
+                  ? props.tweetData.retweetFrom?.fullName
+                  : props.tweetData.author?.fullName}
                 <br></br>
                 <p style={{ color: "#4169e1", fontSize: "small" }}>
                   &nbsp; <i className="fa-solid fa-location-dot"> </i> &nbsp;
-                  {props.tweetData.location}
+                  {props.tweetData?.location}
                 </p>
               </p>
             </div>
@@ -801,7 +801,7 @@ function SubscribedCard(props) {
               </div>
               <div className="col-10">
                 {" "}
-                Retweeted By {props.tweetData.author.fullName}
+                Retweeted By {props.tweetData.author?.fullName}
               </div>
             </div>
           </Card>
@@ -813,7 +813,7 @@ function SubscribedCard(props) {
           src={props.tweetData.image}
           alt="Network error"
         />
-        <Modal.Body>{props.tweetData.description}</Modal.Body>
+        <Modal.Body>{props.tweetData?.description}</Modal.Body>
       </Modal>
     </div>
   );
